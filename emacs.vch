@@ -1,3 +1,63 @@
+# Voice commands for Emacs
+
+do(command) := {Alt+x} $command {Enter};
+elisp(e) := {Alt+:} $e {Enter};
+
+# ---------------------------------------------------------------------------
+# Buffer and File Manipulation
+
+include folders.vch;
+include   files.vch;
+ 
+Buffer <file>        = {Ctrl+x}{Ctrl+f} $1 {Enter};
+Buffer <file> Revert = {Ctrl+x}{Ctrl+f} $1 {Enter}
+                       do(revert-buffer) yes{Enter};
+Switch Buffer = {Ctrl+x}{b}{Enter};
+Switch Buffer         1..20 =        {Ctrl+x}{Ctrl+b}{Down_$1} " ";
+I Meant Switch Buffer 1..20 = {Alt+o}{Ctrl+x}{Ctrl+b}{Down_$1} " ";
+Kill Buffer        = {Ctrl+x}k{Enter};
+Two Buffers        = {Ctrl+x}2;
+Two Buffers Across = {Ctrl+x}3;
+One Buffer         = {Ctrl+x}1;
+Other Buffer       = {Ctrl+x}o;
+One Other Buffer   = {Ctrl+x}0;
+Buffer List        = {Ctrl+x}{Ctrl+b};
+Revert Buffer = do(revert-buffer) yes{Enter};
+Revert Buffer Hard = {Ctrl+x}{Ctrl+v}{Enter};
+Buffer Shell = do(shell);
+Buffer (scratch|compilation) = {Ctrl+x}b *$1* {Enter};
+[Toggle] Read Only = {Ctrl+x}{Ctrl+q};
+[Toggle] Fill Mode = do(auto-fill-mode);
+[Toggle] (Overwrite|Overstrike) Mode = do(overwrite-mode);
+
+Open File  = {Ctrl+x}{Ctrl+f};
+Save (File={Ctrl+s} | All=s | As={Ctrl+w}) = {Ctrl+x} $1;
+Open File <folder> = {Ctrl+x}{Ctrl+f}{Ctrl+a}{Ctrl+k} $1/;
+Save As   <folder> = {Ctrl+x}{Ctrl+w}{Ctrl+a}{Ctrl+k} $1/;
+Wrong File = {Ctrl+x}{Ctrl+v};
+Recover File = do(recover-file) {Enter}yes{Enter};
+Make Directory = do(make-directory) {Enter};
+
+Reload Dot Emacs = do(load-library) ~/.emacs{Enter};
+(Exit Emacs | Close Window) = {Ctrl+x}{Ctrl+c};
+
+I Meant Edit Machine Commands =
+    {Alt+k} SendSystemKeys({Alt+Tab}) HeardWord(Edit, Machine, Commands);
+
+# ---------------------------------------------------------------------------
+# Straight mouse grid commands inspired by Kim Patch
+
+include utilities.vch;
+
+<n> := 0..99;
+<n> <n> ( Paste     = {Ctrl+y}
+        | Mark      = {Ctrl+Space}
+        | Copy      = {Alt+w}
+        | Kill      = {Ctrl+w}
+        | Duplicate = {Alt+w}{Ctrl+y}
+        | Kill Line      = {Ctrl+a}{Ctrl+Space}{Ctrl+n}{Ctrl+w}
+        | Copy Line      = {Ctrl+a}{Ctrl+Space}{Ctrl+n}{Alt+w}
+
 <number> := 1..99;
 
 execute(statement) := {Alt+x} $statement {Enter};

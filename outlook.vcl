@@ -1,4 +1,4 @@
-# Voice commands for outlook
+﻿# Voice commands for outlook
 cc <_anything> = {Alt+C} $1 {Tab} HeardWord (go, to, body);
 <relativeday> := (today| tomorrow);
 follow up <relativeday> = HeardWord(click, follow, up) Wait(0) HeardWord(click, $1);

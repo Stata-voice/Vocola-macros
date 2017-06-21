@@ -1,1 +1,0 @@
-# Voice commands for notepad++
