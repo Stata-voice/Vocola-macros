@@ -1,6 +1,9 @@
-Global voice commands
+#Global voice commands
+
+
 include "string.vch";
 include "URLs.vch";
+#include keys.vch;
 
 # Punctuation
 bam = "!";
@@ -11,20 +14,20 @@ Find text <_anything> = {Ctrl+f} Wait(100) $1  {Enter};
 start bullet list = "* ";
 start numbered list = "1. ";
 Copy and paste that = {Ctrl+c} Wait(0) {Ctrl+v};
-save document = {Ctrl+s};
 space paste that = " " HeardWord(paste, that);
+save (document|that)     = {Contrl+s};
 
-
-space snake <_anything> = " " Replace(Lower($1)," ","_");
-snake <_anything> = Replace(Lower($1)," ","_");
+#Functions replace and lower are unknown – ! Need to fix!
+#space snake <_anything> = " " replace(lower($1)," ","_");
+#snake <_anything> = replace(lower($1)," ","_");
 Pascal <_anything> = Eval("''.join(x for x in $1.title() if not x.isspace())");
 space Pascal <_anything> = " " Eval("''.join(x for x in $1.title() if not x.isspace())");
-#uppercase <_anything> = Format.allcaps($1);
-space dash word <_anything> = " " Replace(Lower($1)," ","-");
-dash word <_anything> =  Replace(Lower($1)," ","-");
-studded <_anything> =" " Replace($1," ",".");
-Camel <_anything> = Eval("$1[0].lower() + ''.join(x for x in $1.title() if not x.isspace())[1:]");
-space Camel <_anything> = " " Eval("$1[0].lower() + ''.join(x for x in $1.title() if not x.isspace())[1:]");
+#uppercase <_anything> = Format.allcaps($1);	
+#space dash word <_anything> = " " replace(lower($1)," ","-");
+#dash word <_anything> =  replace(lower($1)," ","-");
+#studded <_anything> =" " replace($1," ",".");
+#Camel <_anything> = Eval("$1[0].lower() + ''.join(x for x in $1.title() if not x.isspace())[1:]");
+#space Camel <_anything> = " " Eval("$1[0].lower() + ''.join(x for x in $1.title() if not x.isspace())[1:]");
 
 simon says <_anything> = $1;
 
@@ -62,7 +65,6 @@ Copy to (NatSpeak|Emacs|Composition)
 Close Here = ButtonClick(2,1) Wait(100) c;
 Close Window = {Alt+Space}c;
 
-
 (Switch|Next) View     = {Ctrl+Tab};
 (Switch|Next) View <n> = {Ctrl+Tab_$2};
 Previous View     = {Ctrl+Shift+Tab};
@@ -86,7 +88,7 @@ Exit NatSpeak            = SendSystemKeys( {NumKey*} ) Wait(100) e;
 # ---------------------------------------------------------------------------
 # Mouse Handling
 
-Hit Down   = ButtonClick();
+Click Mouse   = ButtonClick();
 Hit Double = ButtonClick(1,2);
 (Shift=1 | Control=2 | Alt=3) Click = ShiftKey($1) ButtonClick();
 Hit Start [Menu] = SendSystemKeys( {Ctrl+Esc} );
@@ -197,7 +199,7 @@ Copy All             = {Ctrl+a}{Ctrl+c};
 Kill Flow Here       = {Ctrl+Shift+End} {Ctrl+x};
 Kill Back Flow Here  = {Ctrl+Shift+Home}{Ctrl+x};
 Replace All          = {Ctrl+a}{Del}{Ctrl+v};
-Save Document	     = {Contrl+s};
+
                     
 ### Selection         
 Kill That 	     = {Del};
@@ -216,7 +218,7 @@ Camel [Case] That = HeardWord(\Cap,That) HeardWord(compound,that) {Ctrl+Left}
                     {Shift+Right} HeardWord(\No-Caps,That){Ctrl+Right};
 (Cap | Up Case) <n> = {Shift+Right_$2} HeardWord(\All-Caps,That);
 
-#include keys.vch;
+
 
 # ---------------------------------------------------------------------------
 # Commands for Windows XP (that work differently under Windows 2000)
