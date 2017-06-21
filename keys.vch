@@ -1,9 +1,9 @@
-# Commands for speaking keys
+#Commands for speaking keys
 
 # This is a separate file so it can be included in both global commands
 # and Emacs commands, and thus used in command sequences in both places
 
-<key> := ( alpha=a | bravo=b | charlie=c | delta=d | echo=e | foxtrot=f
+<key> = ( alpha=a | bravo=b | charlie=c | delta=d | echo=e | foxtrot=f
          | golf=g | hotel=h | india=i | juliett=j | kilo=k | lima=l
          | mike=m | november=n | oscar=o | papa=p | quebec=q | romeo=r
          | sierra=s | tango=t | uniform=u | victor=v | whiskey=w
@@ -14,8 +14,8 @@
          | ";" | ":" | "'" | '"' | "," | "<" | "." | ">" | "/" | "?"
          | Left | Right | Up | Down | space-bar=" " | tab-key=Tab | Enter
          | page-up=PgUp | page-down=PgDn | Backspace | delete=Del
-         | Escape=Esc | Home | End
-         );
+         | Escape=Esc | Home | End 
+	 );
 
 Press <key> = {$1};
 <key> Here = ButtonClick() {$1};
