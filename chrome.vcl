@@ -13,6 +13,7 @@ return to list = {u} ;
 (archive|"remove star"|"remove label") = {y} ;
 select = {x} ;
 delete = {d} ;
+label <_anything> = {l} Wait(10) $1  {Enter};
 star that = {s} ;
 report spam = {!} ;
 reply = {r} ;
