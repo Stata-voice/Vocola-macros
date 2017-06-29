@@ -138,21 +138,14 @@ Camel [Case] That 		= HeardWord(\Cap,That) HeardWord(compound,that) {Ctrl+Left}
 
 ### Opening browser
 [search] Google for <_anything> = AppBringUp("chrome") {Alt+g}$1{Enter} ;
-Switch to Browser 		= AppBringUp(iexplore);
+Switch to Browser 		= AppBringUp("chrome");
 
-### html
-
-HTML cell header 		= "<th>";
-HTML cell header end 		= "</th>";
-HTML cell = "<td>";
-HTML cell end = "</td>";
-
-<website> := (GitHub = https://github.com/
-		| Gmail = https://mail.google.com
-		| Facebook = www.Facebook.com
-		| stack overflow = stackoverflow.com 
-		| LinkedIn = LinkedIn.com
-		| Google drive =https://drive.google.com/drive/u/0/my-drive);
+<website> := ( GitHub = https://github.com/
+	     	| Gmail = https://mail.google.com
+	     	| Facebook = www.Facebook.com
+	     	| stack overflow = stackoverflow.com 
+	     | LinkedIn = LinkedIn.com
+	     | Google drive =https://drive.google.com/drive/u/0/my-drive);
 Navigate to <website> 		= ShellExecute("chrome.exe $1");	
 navigate to <_anything> .com	= ShellExecute("chrome.exe $1.com");	
 
