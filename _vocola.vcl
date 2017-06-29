@@ -9,6 +9,10 @@ include "URLs.vch";
 bam = "!";
 Hashtag = "#";
 
+#View of Application/text
+make text smaller = {Ctrl+-};
+make text bigger = {Ctrl++};
+
 #
 Find text <_anything> = {Ctrl+f} Wait(100) $1  {Enter};
 start bullet list = "* ";
@@ -169,8 +173,8 @@ Kill Back <n> Lines  = {home}{Shift+Up_$1}  {Shift+Home}{Del};
 Kill Here            = {Shift+End}{Del};
 Kill Back Here       = {Shift+Home}{Del};
 Duplicate Line       = {home}{Shift+Down}{Shift+Home}{Ctrl+c}{Home}{Ctrl+v};
-insert line after this = {end}{Enter};
-insert line before this = {home}{Enter} {Up};
+insert line after [this] = {end}{Enter};
+insert line before [this] = {home}{Enter} {Up};
 [go to] beginning of line = {Shift+Home};
 copy beginning of line = {Shift+Home}{Ctrl+c};
 cut beginning of line = {Shift+Home}{Ctrl+X};
