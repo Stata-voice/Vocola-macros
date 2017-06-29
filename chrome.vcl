@@ -52,6 +52,3 @@ next tab = {Ctrl+Tab};
 tab [1..9] = {Ctrl+$1};
 previous page = {Alt+Left};
 next page = {Alt+Right};
-
-repeat command = {Up} {Enter};
-
