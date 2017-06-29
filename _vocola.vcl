@@ -25,16 +25,20 @@ simon says <_anything> 		= $1;
 <start_end> := (Start={Home} | End={End});
 
 ### Characters Finite
-<direction> <n> [Lines]       	= {$1_$2};
-Kill (Char | 1 | One) 		= {Del};
-Kill [Left] [1]        		= {Backspace};
-Kill <n>              		= {Del_$1};
-[Kill] Left <n>       		= {Backspace_$1};
+<direction> <n> [Lines]       	= {$1_$2};  # moving right or left
+
+Dell [Right] (Char | 1 | One) 	= {Del};
+Dell [Right] <n>              	= {Del_$1};
+
+Back [Left] [1]        		= {Backspace};
+Back [Left] <n>       		= {Backspace_$1};
 
 
 ### Words
 <left_right> [One] Word 	= {Ctrl+$1};
 <left_right> <n> Words 		= {Ctrl+$1_$2};
+
+
 
 
 ## Need to review what these were originally, see what they are now:
