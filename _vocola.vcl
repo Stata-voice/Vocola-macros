@@ -223,52 +223,6 @@ Camel [Case] That = HeardWord(\Cap,That) HeardWord(compound,that) {Ctrl+Left}
 (Cap | Up Case) <n> = {Shift+Right_$2} HeardWord(\All-Caps,That);
 
 
-
-# ---------------------------------------------------------------------------
-# Commands for Windows XP (that work differently under Windows 2000)
-
-Recent Documents = SendSystemKeys({Ctrl+Esc}) {Home}{Right_2};
-
-Environment Variables = SendSystemKeys({Ctrl+Esc}) c Wait(1000) 
-                        sssssss{Enter} Wait(1000) "{Right 3}{Alt+n}";
-
-# Taskbar commands
-
-launchBar()  := SendSystemKeys({Ctrl+Esc}) {Tab};
-taskBar()    := SendSystemKeys({Ctrl+Esc}) {Tab_7};
-systemTray() := SendSystemKeys({Ctrl+Esc}) {Tab_3};
-<1to20> := 1..20;
-
-Launch <1to20> = launchBar() {Left}{Right_$1} " ";
-
-Switch to <1to20> [Right] = taskBar()        {Left_$1} " ";
-Exit     <1to20> [Right] = taskBar()        {Left_$1} " {Alt+F4}";
-Switch to <1to20> Left    = taskBar() {Left}{Right_$1} " ";
-Exit 	<1to20> Left    = taskBar() {Left}{Right_$1} " {Alt+F4}";
-
-# ---------------------------------------------------------------------------
-# Commands for Windows 2000 (that work differently under Windows XP)
-
-#Recent Documents = SendSystemKeys({Ctrl+Esc}) {Up_6}{Right};
-#Run Program      = SendSystemKeys({Ctrl+Esc}) {Up_2}{Enter};
-#
-#Environment Variables = 
-#    AppBringUp("C:\WINNT\System32\SYSDM.CPL") # Control Panel "System"
-#    {Shift+Tab}{Right_4}{Alt+e};              # "Advanced" tab, "Env..." button
-#
-## Taskbar commands
-#
-#taskBar()   := SendSystemKeys({Ctrl+Esc}) {Esc}{Tab_2};
-#launchBar() := SendSystemKeys({Ctrl+Esc}) {Esc}{Tab};
-#<1to20> := 1..20;
-#
-#Switch to <1to20> [Right] = taskBar() {Right_20}{Left_$1}{Right} " ";
-#Close     <1to20> [Right] = taskBar() {Right_20}{Left_$1}{Right} " " {Alt+F4};
-#Switch to <1to20> Left    = taskBar() {Right_$1} " ";
-#Close     <1to20> Left    = taskBar() {Right_$1} " " {Alt+F4};
-#
-#Launch <1to20> = launchBar() {Left}{Right_$1} " ";
-
 # ---------------------------------------------------------------------------
 # Context-Sensitive Commands
 
