@@ -1,0 +1,21 @@
+# Formatting for Coding
+
+###Functions replace and lower are unknown – ! Need to fix!
+#space snake <_anything> 	= " " replace(lower($1)," ","_");
+#snake <_anything> 		= replace(lower($1)," ","_");
+
+Pascal <_anything> 		= Eval("''.join(x for x in $1.title() if not x.isspace())");
+Space Pascal <_anything> 	= " " Eval("''.join(x for x in $1.title() if not x.isspace())");
+
+#Uppercase <_anything> 		= Format.allcaps($1);	
+(Cap | Up Case) <n> 		= {Shift+Right_$2} HeardWord(\All-Caps,That);
+
+#Space dash word <_anything> 	= " " replace(lower($1)," ","-");
+#Dash word <_anything> 		=  replace(lower($1)," ","-");
+
+#studded <_anything> 		=" " replace($1," ",".");
+
+#Camel <_anything> 		= Eval("$1[0].lower() + ''.join(x for x in $1.title() if not x.isspace())[1:]");
+#Space Camel <_anything> 	= " " Eval("$1[0].lower() + ''.join(x for x in $1.title() if not x.isspace())[1:]");
+Camel [Case] That 		= HeardWord(\Cap,That) HeardWord(compound,that) {Ctrl+Left}
+                 		   {Shift+Right} HeardWord(\No-Caps,That){Ctrl+Right};
