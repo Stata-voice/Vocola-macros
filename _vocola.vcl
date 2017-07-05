@@ -228,7 +228,6 @@ Drag <n> <leftRight> 		= dragBy($2$1, 0);
 [Size] Window <edge> <n> <upDown>    = moveToEdge($1) dragBy(0, $3$2);
 [Size] Window <edge> <n> <leftRight> = moveToEdge($1) dragBy($3$2, 0);
 
-Maximize Window 		= touchNearEdge(ne,-2,1);
 
 Tile Windows     		= tileWindows(0);
 Tile Windows <n> 		= tileWindows($1);  
