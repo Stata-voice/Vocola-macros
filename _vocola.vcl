@@ -44,6 +44,9 @@ Copy <direction> [One] Word	= {Ctrl+Shift+$1}{Ctrl+c};
 Copy <direction> <n> Words     	= {Ctrl+Shift+$1_$2}{Ctrl+c};
 
 
+****
+
+
 
 
 
@@ -65,15 +68,15 @@ Kill Back <n> Lines  		= {home}{Shift+Up_$1}  {Shift+Home}{Del};
 Kill Here            		= {Shift+End}{Del};
 Kill Back Here       		= {Shift+Home}{Del};
 Duplicate Line       		= {home}{Shift+Down}{Shift+Home}{Ctrl+c}{Home}{Ctrl+v};
-insert line after [this] 	= {end}{Enter};
-insert line before [this] 	= {home}{Enter} {Up};
-[go to] beginning of line 	= {Shift+Home}{Left}{Right};
-copy beginning of line 		= {Shift+Home}{Ctrl+c};
-cut beginning of line 		= {Shift+Home}{Ctrl+X};
-[go to] end of line		= {Shift+End} {Right}{Left};
-copy rest of line		= {Shift+End}{Ctrl+c};
-cut rest of line		= {Shift+End} {Ctrl+x};
-end line with <_anything>	= {End} $1;
+Insert line after [this] 	= {end}{Enter};
+Insert line before [this] 	= {home}{Enter} {Up};
+[Go to] Beginning of line 	= {Shift+Home}{Left}{Right};
+Copy Beginning of line 		= {Shift+Home}{Ctrl+c};
+Cut Beginning of line 		= {Shift+Home}{Ctrl+X};
+[Go to] End of line		= {Shift+End} {Right}{Left};
+Copy rest of line		= {Shift+End}{Ctrl+c};
+Cut rest of line		= {Shift+End} {Ctrl+x};
+End line with <_anything>	= {End} $1;
               
 ### Paragraphs        
 Para Start          		= {Ctrl+Up}{Right}{Home};
@@ -82,8 +85,8 @@ Para End            		= {Ctrl+Down}{Left_2}{End};
 Open (Paragraph|Para|Line)    	= {Enter}{Enter}{Left};
 Copy (Paragraph|Para)           = {Ctrl+Down}{Shift+Ctrl+Up}{Ctrl+c};
 Kill (Paragraph|Para)           = {Ctrl+Down}{Shift+Ctrl+Up}{Del};
-insert (Paragraph|Para) after [this] 	= {end}{Enter}{Enter};
-insert (Paragraph|Para) before [this] 	= {home}{Enter}{Enter};
+Insert (Paragraph|Para) after [this] 	= {end}{Enter}{Enter};
+Insert (Paragraph|Para) before [this] 	= {home}{Enter}{Enter};
 Duplicate (Paragraph|Para)     	= {Ctrl+Down}{Shift+Ctrl+Up}{Ctrl+c}{Home}{Ctrl+v};
                     
 ### Entire "Flow"   
