@@ -33,10 +33,16 @@ Dell [Right] <n>              	= {Del_$1};
 Back [Left] [1]        		= {Backspace};
 Back [Left] <n>       		= {Backspace_$1};
 
+Copy <direction> <n>        	= {Shift+$1_$2}{Ctrl+c};
+
 
 ### Words
 <left_right> [One] Word 	= {Ctrl+$1};
 <left_right> <n> Words 		= {Ctrl+$1_$2};
+
+Copy <direction> [One] Word	= {Ctrl+Shift+$1}{Ctrl+c};
+Copy <direction> <n> Words     	= {Ctrl+Shift+$1_$2}{Ctrl+c};
+
 
 
 
