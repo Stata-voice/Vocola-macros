@@ -164,6 +164,7 @@ Switch to Browser 		= AppBringUp("chrome");
 
 ### Switch applications, windows, and panels
 
+File Explorer			= AppBringUp("explorer");  # Opens File Explorer
 Switch Window 			= SendSystemKeys( {Alt+Tab} );
 Copy and Switch  		= {Ctrl+a}{Ctrl+c} SendSystemKeys( {Alt+Tab} );
 Copy to (NatSpeak|Emacs|Composition)
@@ -243,7 +244,7 @@ include folders.vch;
 ### Commands for "file browse" dialog boxes
 
 Open | New | Save | File | Attachment | Browse | Directory:
-  Folder <folder> 		= {Ctrl+c}$1\{Enter};
+  Folder <folder> 		= $1\{Enter};
   Go Up 			= ..{Enter};
   Go Up <n> 			= Repeat($1, ..\) {Enter};
   Folder List 			= {Shift+Tab_2}{Down}{PgUp};
