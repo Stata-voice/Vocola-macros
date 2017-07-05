@@ -1,11 +1,18 @@
-# Interesting folders at home
+# Interesting folders
 
 <folder> := 
- ( Temp            = C:\Temp
- | Downloads       = C:\Programs\Downloads
- | Start Menu      = "C:\Documents and Settings\Rick Mohr\Start Menu"
-#### Voice   
- | Vocola          = C:\Programs\NatLink\Vocola
- | NatLink         = C:\Programs\NatLink\MacroSystem
- | NatSpeak        = C:\Programs\NatSpeak\Users\Rick\current
+ ( Temp            	= C:\Temp
+ | Downloads       	= "C:\Users\Molly King\Downloads"
+ | Start Menu      	= "C:\Documents and Settings\Molly King\Start Menu"
+ | Program Files   	= "C:\Program Files"
+ | Research		= "C:\Users\Molly King\Documents\SocResearch"
+
+### Dissertation
+ | Dissertation	all	= "C:\Users\Molly King\Documents\SocResearch\Dissertation"
+ | Dissertation data	= "C:\Users\Molly King\Documents\SocResearch\Dissertation\data"
+ | Dissertation analysis= "C:\Users\Molly King\Documents\SocResearch\Dissertation\stata"
+
+### Voice   
+ | Vocola Commands 	= C:\Users\Molly King\Documents\Dragon\Vocola-macros
  );
+
