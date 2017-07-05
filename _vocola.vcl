@@ -149,15 +149,16 @@ Camel [Case] That 		= HeardWord(\Cap,That) HeardWord(compound,that) {Ctrl+Left}
 ### Opening browser
 [search] Google for <_anything> = AppBringUp("chrome") {Alt+g}$1{Enter} ;
 
+
 <website> := ( GitHub = https://github.com/
-	     	| Gmail = https://mail.google.com
-	     	| Facebook = www.Facebook.com
-	     	| stack overflow = stackoverflow.com 
+	     | Gmail = https://mail.google.com
+	     | Facebook = www.Facebook.com
+	     | stack overflow = stackoverflow.com 
 	     | LinkedIn = LinkedIn.com
 	     | Google drive =https://drive.google.com/drive/u/0/my-drive);
 
-(navigate|go) to <website> 		= ShellExecute("chrome.exe $1");	
-(navigate|go) to <_anything> .com	= ShellExecute("chrome.exe $1.com");	
+(Navigate|Go) to <website> 		= ShellExecute("chrome.exe $1");	
+(Navigate|go) to <_anything> .com	= ShellExecute("chrome.exe $1.com");	
 
 # ---------------------------------------------------------------------------
 
