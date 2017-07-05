@@ -148,7 +148,6 @@ Camel [Case] That 		= HeardWord(\Cap,That) HeardWord(compound,that) {Ctrl+Left}
 
 ### Opening browser
 [search] Google for <_anything> = AppBringUp("chrome") {Alt+g}$1{Enter} ;
-Switch to Browser 		= AppBringUp("chrome");
 
 <website> := ( GitHub = https://github.com/
 	     	| Gmail = https://mail.google.com
