@@ -9,7 +9,7 @@ include "URLs.vch";
 
 #View of Application/text
 make text smaller 		= {Ctrl+-};
-make text bigger 		= {Ctrl++};
+make text (bigger| larger)	= {Ctrl++};
 
 ### Miscellaneous
 repeat command 			= {Up} {Enter};
@@ -156,8 +156,9 @@ Switch to Browser 		= AppBringUp("chrome");
 	     	| stack overflow = stackoverflow.com 
 	     | LinkedIn = LinkedIn.com
 	     | Google drive =https://drive.google.com/drive/u/0/my-drive);
-Navigate to <website> 		= ShellExecute("chrome.exe $1");	
-navigate to <_anything> .com	= ShellExecute("chrome.exe $1.com");	
+
+(navigate|go) to <website> 		= ShellExecute("chrome.exe $1");	
+(navigate|go) to <_anything> .com	= ShellExecute("chrome.exe $1.com");	
 
 # ---------------------------------------------------------------------------
 
