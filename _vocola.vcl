@@ -69,11 +69,13 @@ Line Here            		= {Enter}{Left};
 Copy Line           		= {home}{Shift+Down}{Shift+Home}{Ctrl+c};
 
 Kill Line            		= {home}{Shift+Down}{Shift+Home}{Del};
-Kill Back Line       		= {home}{Shift+Up}  {Shift+Home}{Del};
+Kill Up Line       		= {home}{Shift+Up}  {Shift+Home}{Del};
+Kill Up <n> Lines  		= {home}{Shift+Up_$1}  {Shift+Home}{Del};
 Kill <n> Lines       		= {home}{Shift+Down_$1}{Shift+Home}{Del};
-Kill Back <n> Lines  		= {home}{Shift+Up_$1}  {Shift+Home}{Del};
 Kill Here            		= {Shift+End}{Del};
 Kill Back Here       		= {Shift+Home}{Del};
+Kill Down (1|One) [Line]       	= {End}{Shift+Down}{Shift+Home}{Del};
+Kill Down <n> Lines       	= {End}{Shift+Down_$1}{Shift+Home}{Del};
 
 Duplicate Line       		= {home}{Shift+Down}{Shift+Home}{Ctrl+c}{Home}{Ctrl+v};
 Insert line (after|down) 	= {end}{Enter};
