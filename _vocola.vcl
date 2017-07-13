@@ -57,7 +57,6 @@ Copy <direction> <n> Words     	= {Ctrl+Shift+$1_$2}{Ctrl+c};
 #Kill Left <n> Words    	= {Left}{Ctrl+Right}{Shift+Ctrl+Left_$1}{Del};
 
 ### Lines
-Line <start_end>     		= $1;
 New Line             		= {Enter};
 Line Here            		= {Enter}{Left};
 Copy Line           		= {home}{Shift+Down}{Shift+Home}{Ctrl+c};
