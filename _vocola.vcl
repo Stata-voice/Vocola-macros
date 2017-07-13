@@ -1,5 +1,7 @@
 #Global voice commands
 
+### Ideas from various languages: 
+### https://docs.google.com/spreadsheets/d/1pk2gwTFbMebgYSsrxIFsZ-QvpEPWCybF8ypdeBvfBsg/pubhtml
 
 include "string.vch";
 include "URLs.vch";
