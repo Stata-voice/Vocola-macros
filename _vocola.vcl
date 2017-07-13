@@ -72,8 +72,6 @@ Kill Line            		= {home}{Shift+Down}{Shift+Home}{Del};
 Kill Up Line       		= {home}{Shift+Up}  {Shift+Home}{Del};
 Kill Up <n> Lines  		= {home}{Shift+Up_$1}  {Shift+Home}{Del};
 Kill <n> Lines       		= {home}{Shift+Down_$1}{Shift+Home}{Del};
-Kill Here            		= {Shift+End}{Del};
-Kill Back Here       		= {Shift+Home}{Del};
 Kill Down (1|One) [Line]       	= {End}{Shift+Down}{Shift+Home}{Del};
 Kill Down <n> Lines       	= {End}{Shift+Down_$1}{Shift+Home}{Del};
 
@@ -84,10 +82,14 @@ Insert line (before|up) 	= {home}{Enter} {Up};
 [Go to] (Ghin|Beginning) [of] line = {Home};
 Copy (Ghin|Beginning) [of] line = {Shift+Home}{Ctrl+c};
 Cut (Ghin|Beginning) [of] line 	= {Shift+Home}{Ctrl+X};
+Crop [line] Left 		= {Shift+Home}{Backspace};
+Back line			= {Shift+Home}{Backspace};
 
 [Go to] End [of] line		= {End};
 Copy (end | rest) [of] line	= {Shift+End}{Ctrl+c};
 Cut (end | rest) [of] line		= {Shift+End}{Ctrl+x};
+Dell line			= {Shift+End}{Backspace};
+Crop [line] Right		= {Shift+End}{Backspace};
 End line with <_anything>	= {End} $1;
               
 ### Paragraphs        
