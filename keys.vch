@@ -39,6 +39,7 @@
 	Left | Right | Up | Down | 
 	space-bar	=" " | 
 	tab-key		=Tab | 
+	Nell		=Enter | 
 	page-up		=PgUp | 
 	page-down	=PgDn | 
 	Backspace | 
