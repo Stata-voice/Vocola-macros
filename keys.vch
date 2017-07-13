@@ -31,16 +31,22 @@
  	whisk[ing]	=w |
 	tang[ing]	=x | 
 	yank[ing]	=y |
-	zoot[ing]	=z
-         | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-         | "!" | "@" | "#" | "$" | "%" | "^" | "&" | "*" | "(" | ")" | "`" 
-         | "~" | "-" | "_" | "=" | "+" | "\" | "|" | "[" | "{" | "]" | "}" 
-         | ";" | ":" | "'" | '"' | "," | "<" | "." | ">" | "/" | "?"
-         | Left | Right | Up | Down | space-bar=" " | tab-key=Tab | Enter
-         | page-up=PgUp | page-down=PgDn | Backspace | delete=Del
-         | Escape=Esc | Home | End 
+	zoot[ing]	=z | 
+	0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 
+	"!" | "@" | "#" | "$" | "%" | "^" | "&" | "*" | "(" | ")" | "`" | 
+	"~" | "-" | "_" | "=" | "+" | "\" | "|" | "[" | "{" | "]" | "}" | 
+	";" | ":" | "'" | '"' | "," | "<" | "." | ">" | "/" | "?" | 
+	Left | Right | Up | Down | 
+	space-bar	=" " | 
+	tab-key		=Tab | 
+	page-up		=PgUp | 
+	page-down	=PgDn | 
+	Backspace | 
+	Dell		=Del | 
+	Cape		=Esc | 
+	Home | End 
 	 );
-
+	
 <key> = {$1};
 <key> Here = ButtonClick() {$1};
 
