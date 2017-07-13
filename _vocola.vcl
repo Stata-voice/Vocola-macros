@@ -41,7 +41,11 @@ Copy <direction> <n>        	= {Shift+$1_$2}{Ctrl+c};
 
 ### Words
 <left_right> [One] Word 	= {Ctrl+$1};
+Law [One] 		 	= {Ctrl+Left};
+Raw [One] 		 	= {Ctrl+Right};
 <left_right> <n> Words 		= {Ctrl+$1_$2};
+law <n> 			= {Ctrl+Left_$1};
+Raw <n> 			= {Ctrl+right_$1};
 
 Copy <direction> [One] Word	= {Ctrl+Shift+$1}{Ctrl+c};
 Copy <direction> <n> Words     	= {Ctrl+Shift+$1_$2}{Ctrl+c};
