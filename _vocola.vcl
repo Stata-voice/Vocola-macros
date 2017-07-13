@@ -16,6 +16,7 @@ repeat command 			= {Up} {Enter};
 find text <_anything> 		= {Ctrl+f} Wait(100) $1 {Enter};
 simon says <_anything> 		= $1;
 
+
 # ---------------------------------------------------------------------------
 # Text Editing
 
@@ -25,7 +26,7 @@ simon says <_anything> 		= $1;
 <start_end> := (Start={Home} | End={End});
 
 ### Characters Finite
-<direction> <n> [Lines]       	= {$1_$2};  # moving right or left
+<direction> <n> [Lines]       	= {$1_$2};  # moving right left
 
 Dell [Right] (Char | 1 | One) 	= {Del};
 Dell [Right] <n>              	= {Del_$1};
@@ -60,18 +61,22 @@ Copy <direction> <n> Words     	= {Ctrl+Shift+$1_$2}{Ctrl+c};
 New Line             		= {Enter};
 Line Here            		= {Enter}{Left};
 Copy Line           		= {home}{Shift+Down}{Shift+Home}{Ctrl+c};
+
 Kill Line            		= {home}{Shift+Down}{Shift+Home}{Del};
 Kill Back Line       		= {home}{Shift+Up}  {Shift+Home}{Del};
 Kill <n> Lines       		= {home}{Shift+Down_$1}{Shift+Home}{Del};
 Kill Back <n> Lines  		= {home}{Shift+Up_$1}  {Shift+Home}{Del};
 Kill Here            		= {Shift+End}{Del};
 Kill Back Here       		= {Shift+Home}{Del};
+
 Duplicate Line       		= {home}{Shift+Down}{Shift+Home}{Ctrl+c}{Home}{Ctrl+v};
 Insert line (after|down) 	= {end}{Enter};
 Insert line (before|up) 	= {home}{Enter} {Up};
+
 [Go to] (Ghin|Beginning) [of] line = {Home};
 Copy (Ghin|Beginning) [of] line = {Shift+Home}{Ctrl+c};
 Cut (Ghin|Beginning) [of] line 	= {Shift+Home}{Ctrl+X};
+
 [Go to] End [of] line		= {End};
 Copy (end | rest) [of] line	= {Shift+End}{Ctrl+c};
 Cut (end | rest) [of] line		= {Shift+End}{Ctrl+x};
@@ -144,6 +149,7 @@ space Pascal <_anything> 	= " " Eval("''.join(x for x in $1.title() if not x.iss
 Camel [Case] That 		= HeardWord(\Cap,That) HeardWord(compound,that) {Ctrl+Left}
                  		   {Shift+Right} HeardWord(\No-Caps,That){Ctrl+Right};
 
+
 # ---------------------------------------------------------------------------
 
 # Web Browsing
@@ -167,6 +173,7 @@ Camel [Case] That 		= HeardWord(\Cap,That) HeardWord(compound,that) {Ctrl+Left}
 ### Switch applications, windows, and panels
 
 File Explorer			= AppBringUp("explorer");  # Opens File Explorer
+
 Switch Window 			= SendSystemKeys( {Alt+Tab} );
 Copy and Switch  		= {Ctrl+a}{Ctrl+c} SendSystemKeys( {Alt+Tab} );
 Copy to (NatSpeak|Emacs|Composition)
