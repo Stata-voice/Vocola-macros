@@ -67,14 +67,14 @@ Kill Back <n> Lines  		= {home}{Shift+Up_$1}  {Shift+Home}{Del};
 Kill Here            		= {Shift+End}{Del};
 Kill Back Here       		= {Shift+Home}{Del};
 Duplicate Line       		= {home}{Shift+Down}{Shift+Home}{Ctrl+c}{Home}{Ctrl+v};
-Copy Beginning of line 		= {Shift+Home}{Ctrl+c};
-Cut Beginning of line 		= {Shift+Home}{Ctrl+X};
-Copy rest of line		= {Shift+End}{Ctrl+c};
-Cut rest of line		= {Shift+End} {Ctrl+x};
 Insert line (after|down) 	= {end}{Enter};
 Insert line (before|up) 	= {home}{Enter} {Up};
 [Go to] (Ghin|Beginning) [of] line = {Home};
+Copy (Ghin|Beginning) [of] line = {Shift+Home}{Ctrl+c};
+Cut (Ghin|Beginning) [of] line 	= {Shift+Home}{Ctrl+X};
 [Go to] End [of] line		= {End};
+Copy (end | rest) [of] line	= {Shift+End}{Ctrl+c};
+Cut (end | rest) [of] line		= {Shift+End}{Ctrl+x};
 End line with <_anything>	= {End} $1;
               
 ### Paragraphs        
