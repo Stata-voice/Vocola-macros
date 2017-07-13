@@ -70,12 +70,12 @@ Kill Back Here       		= {Shift+Home}{Del};
 Duplicate Line       		= {home}{Shift+Down}{Shift+Home}{Ctrl+c}{Home}{Ctrl+v};
 Insert line after [this] 	= {end}{Enter};
 Insert line before [this] 	= {home}{Enter} {Up};
-[Go to] Beginning of line 	= {Shift+Home}{Left}{Right};
 Copy Beginning of line 		= {Shift+Home}{Ctrl+c};
 Cut Beginning of line 		= {Shift+Home}{Ctrl+X};
-[Go to] End of line		= {Shift+End} {Right}{Left};
 Copy rest of line		= {Shift+End}{Ctrl+c};
 Cut rest of line		= {Shift+End} {Ctrl+x};
+[Go to] (Ghin|Beginning) [of] line = {Home};
+[Go to] End [of] line		= {End};
 End line with <_anything>	= {End} $1;
               
 ### Paragraphs        
