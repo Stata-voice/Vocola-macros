@@ -1,13 +1,37 @@
 #Commands for speaking keys
 
 # This is a separate file so it can be included in both global commands
-# and Emacs commands, and thus used in command sequences in both places
+# and other commands, and thus used in command sequences in both places
 
-<key> = ( alpha=a | bravo=b | charlie=c | delta=d | echo=e | foxtrot=f
-         | golf=g | hotel=h | india=i | juliett=j | kilo=k | lima=l
-         | mike=m | november=n | oscar=o | papa=p | quebec=q | romeo=r
-         | sierra=s | tango=t | uniform=u | victor=v | whiskey=w
-         | xray=x | yankee=y | zulu=z
+### Modified Phonetic Alphabet 
+### Adapted parts from NATO alphabet, 
+### part from voice code alphabet:http://voicecode.io/doc/alphabet
+<key> := (alf[ing]	=a | 
+	brov[ing]	=b | 
+	char[ring]	=c | 
+	delt[ing]	=d | 
+	etch[ing]	=e | 
+	fox[ing]	=f | 
+	golf[ing]	=g |
+	hot[ting]	=h |
+	(ice| icing)	=i |
+	jinx[ing]	=j |
+	koop[ing]	=k | 
+	(lime| liming)	=l |
+	(mike| miking) 	=m | 
+	nerd[ing]	=n | 
+	orc[ing]	=o |
+	pooch[ing]	=p |
+	quash[ing]	=q |
+	rom[ming]	=r |
+	souk[ing]	=s |
+	teek[ing]	=t | 
+	boost[ing]	=u |  
+	veg[ging]	=v |
+ 	whisk[ing]	=w |
+	tang[ing]	=x | 
+	yank[ing]	=y |
+	zoot[ing]	=z
          | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
          | "!" | "@" | "#" | "$" | "%" | "^" | "&" | "*" | "(" | ")" | "`" 
          | "~" | "-" | "_" | "=" | "+" | "\" | "|" | "[" | "{" | "]" | "}" 
@@ -17,7 +41,7 @@
          | Escape=Esc | Home | End 
 	 );
 
-Press <key> = {$1};
+<key> = {$1};
 <key> Here = ButtonClick() {$1};
 
 Space Bar = " ";
