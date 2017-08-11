@@ -2,21 +2,21 @@
 
 ### Ideas from various languages: 
 ### https://docs.google.com/spreadsheets/d/1pk2gwTFbMebgYSsrxIFsZ-QvpEPWCybF8ypdeBvfBsg/pubhtml
+### commands in ALL CAPS are from the language VoiceCode (https://github.com/VoiceCode/docs/wiki/Commands-Overview)
 
 include "string.vch";
 include "URLs.vch";
 include "keys.vch";
 include "usernames.vch";
 
-
 #View of Application/text
-make text smaller 		= {Ctrl+-};
-make text (bigger| larger)	= {Ctrl++};
+SHAMAN 				= {Ctrl+-};
+SHOMPLA 			= {Ctrl++};
 
 ### Miscellaneous
 repeat command 			= {Up} {Enter};
-find text <_anything> 		= {Ctrl+f} Wait(100) $1 {Enter};
-simon says <_anything> 		= $1;
+MARCO <_anything> 		= {Ctrl+f} Wait(100) $1 {Enter}; # finds words "anything"
+KEEPER <_anything> 		= $1; # writes out words "anything"
 
 
 # ---------------------------------------------------------------------------
@@ -27,48 +27,52 @@ simon says <_anything> 		= $1;
 <up_down> := Up | Down;
 <start_end> := (Start={Home} | End={End});
 
-### Characters Finite
-<direction> <n> [Lines]       	= {$1_$2};  # moving right left
+### Characters 
 
-Dell [Right] (Char | 1 | One) 	= {Del};
-Dell [Right] <n>              	= {Del_$1};
+CRIMP			       	= {Left};  # moving left
+CRIMP <n>	        	= {Left_$1};  # moving left 
+CHRIS			       	= {Right};  # moving right 
+CHRIS <n>	        	= {Right_$1};  # moving right 
 
-Back [Left] [1]        		= {Backspace};
-Back [Left] <n>       		= {Backspace_$1};
+SPUNK				= {Del}; # deletes a character to the right
+SPUNK <n> 	             	= {Del_$1}; # 
+
+JUNK	        		= {Backspace};
+JUNK <n>	       		= {Backspace_$1};
 
 Copy <direction> <n>        	= {Shift+$1_$2}{Ctrl+c};
 
 
 ### Words
-<left_right> [One] Word 	= {Ctrl+$1};
-Law [One] 		 	= {Ctrl+Left};
-Raw [One] 		 	= {Ctrl+Right};
-<left_right> <n> Words 		= {Ctrl+$1_$2};
-law <n> 			= {Ctrl+Left_$1};
-Raw <n> 			= {Ctrl+right_$1};
+
+FAME	 		 	= {Ctrl+Left}; # move one word to the left
+FAME <n> 			= {Ctrl+Left_$1};
+FISH 	 		 	= {Ctrl+Right}; # move one word to the right
+FISH <n> 			= {Ctrl+right_$1};
+
+TROUGH 				= {Ctrl+Shift+Left}{Del}; # delete one word to the left
+TROUGH <n>			= {Ctrl+Shift+Left_$1}{Del}; 
+KITE				= {Ctrl+Shift+Right}{Del}; # delete one word to the right
+KITE <n>			= {Ctrl+Shift+Right_$1}{Del}; 
+
+WORD NECK 			= {Ctrl+Shift+Right}; 
+WORD PREEV			= {Ctrl+Shift+Left};
 
 Copy <direction> [One] Word	= {Ctrl+Shift+$1}{Ctrl+c};
 Copy <direction> <n> Words     	= {Ctrl+Shift+$1_$2}{Ctrl+c};
 
-
-****
-
-
-
-
-
-## Need to review what these were originally, see what they are now:
-#Kill [Left] Word 		= {Right_2}{Ctrl+Left}{Shift+Ctrl+Right}{Del};
-#Kill <n> Words         	= {Right_2}{Ctrl+Left}{Shift+Ctrl+Right_$1}{Del};
-#Kill Right Word         	= {Left}{Ctrl+Right}{Shift+Ctrl+Left}   {Del};
-#Kill Left <n> Words    	= {Left}{Ctrl+Right}{Shift+Ctrl+Left_$1}{Del};
-
 ### Lines
+
+JEEP				= {Up}; # moving down a line
+JEEP <n>		       	= {Up_$1}; 
+DOOM				= {Down}; # moving down a line
+DOOM <n>		       	= {Down_$1}; 
+
 New Line             		= {Enter};
 Line Here            		= {Enter}{Left};
 Copy Line           		= {home}{Shift+Down}{Shift+Home}{Ctrl+c};
 
-Kill Line            		= {home}{Shift+Down}{Shift+Home}{Del};
+SNIP LINE			= {home}{Shift+Down}{Shift+Home}{Del};
 Kill Up Line       		= {home}{Shift+Up}  {Shift+Home}{Del};
 Kill Up <n> Lines  		= {home}{Shift+Up_$1}  {Shift+Home}{Del};
 Kill <n> Lines       		= {home}{Shift+Down_$1}{Shift+Home}{Del};
@@ -79,17 +83,18 @@ Duplicate Line       		= {home}{Shift+Down}{Shift+Home}{Ctrl+c}{Home}{Ctrl+v};
 Insert line (after|down) 	= {end}{Enter};
 Insert line (before|up) 	= {home}{Enter} {Up};
 
-[Go to] (Ghin|Beginning) [of] line = {Home};
+LEFTY 				= {Home}; # go to beginning of the line
+LECKSY				= {Shift+Home}; # select all text back through beginning of line
 Copy (Ghin|Beginning) [of] line = {Shift+Home}{Ctrl+c};
 Cut (Ghin|Beginning) [of] line 	= {Shift+Home}{Ctrl+X};
-Crop [line] Left 		= {Shift+Home}{Backspace};
-Back line			= {Shift+Home}{Backspace};
+SNIPPLE				= {Shift+Home}{Backspace}; # crop line to the left
 
-[Go to] End [of] line		= {End};
+RICKY 				= {End}; # go to the end of the line
+RICKSY 				= {Shift+End}; # select all text through end of line
 Copy (end | rest) [of] line	= {Shift+End}{Ctrl+c};
-Cut (end | rest) [of] line		= {Shift+End}{Ctrl+x};
-Dell line			= {Shift+End}{Backspace};
-Crop [line] Right		= {Shift+End}{Backspace};
+Cut (end | rest) [of] line	= {Shift+End}{Ctrl+x};
+SNIPPER 			= {Shift+End}{Backspace}; # crop line to the right
+
 End line with <_anything>	= {End} $1;
               
 ### Paragraphs        
@@ -104,9 +109,8 @@ Insert (Paragraph|Para) before [this] 	= {home}{Enter}{Enter};
 Duplicate (Paragraph|Para)     	= {Ctrl+Down}{Shift+Ctrl+Up}{Ctrl+c}{Home}{Ctrl+v};
                     
 ### Entire "Flow"   
-Flow Start           		= {Ctrl+Home};
-Flow End             		= {Ctrl+End};
-Select All           		= {Ctrl+a};
+JEEP WAY			= {Ctrl+Home};
+DOOM WAY			= {Ctrl+End};
 Copy All             		= {Ctrl+a}{Ctrl+c};
 (Cut|Kill) All       		= {Ctrl+a}{Ctrl+x};
 Kill Flow Here       		= {Ctrl+Shift+End} {Ctrl+x};
@@ -115,49 +119,35 @@ Replace All          		= {Ctrl+a}{Del}{Ctrl+v};
 
                     
 ### Selection         
-Kill That 	     		= {Del};
-Cut That             		= {Ctrl+x};
-Yank That            		= {Ctrl+v};
+OLLY				= {Ctrl+a}; 
+STOOSH				= {Ctrl+c}; copy
+SNATCH				= {Ctrl+x}; cute
+SPARK				= {Ctrl+v}; # paste
 Paste Here           		= ButtonClick() {Ctrl+v};
 Duplicate That       		= {Ctrl+c}{Left}{Ctrl+v};
 Keep That            		= {Ctrl+c}{Ctrl+a}{Del}{Ctrl+v};
 Copy and paste that 		= {Ctrl+c} Wait(0) {Ctrl+v};
 space paste that 		= " " HeardWord(paste, that);
-Undo <n> 			= {Ctrl+z_$1};
+
+
+### General Commands 
+DIZZLE 				= {Ctrl+z}; # undo
+DIZZLE <n> 			= {Ctrl+z_$1};
+RIZZLE 				= {Ctrl+y}; # redo
 
 ### Editing
 print that			= {Ctrl+p};
-save (document|that)     	= {Ctrl+s};
+SAGE				= {Ctrl+s};
 
 ### Formatting
-start bullet list 		= "* ";
-start numbered list 		= "1. ";
+(CHAMP | Cap) <n> 		= {Shift+Right_$2} HeardWord(\All-Caps,That); 
+bullet list 			= "* ";
+numbered list 			= "1. ";
 
 ### Punctuation
-bam 				= "!";
+CLAMOR				= "!";
 Hashtag 			= "#";
-empty paren = "()" {Left};
-
-### Formatting for Coding
-###Functions replace and lower are unknown – ! Need to fix!
-#space snake <_anything> 	= " " replace(lower($1)," ","_");
-#snake <_anything> 		= replace(lower($1)," ","_");
-
-Pascal <_anything> 		= Eval("''.join(x for x in $1.title() if not x.isspace())");
-space Pascal <_anything> 	= " " Eval("''.join(x for x in $1.title() if not x.isspace())");
-
-#uppercase <_anything> 		= Format.allcaps($1);	
-(Cap | Up Case) <n> 		= {Shift+Right_$2} HeardWord(\All-Caps,That);
-
-#space dash word <_anything> 	= " " replace(lower($1)," ","-");
-#dash word <_anything> 		=  replace(lower($1)," ","-");
-
-#studded <_anything> 		=" " replace($1," ",".");
-
-#Camel <_anything> 		= Eval("$1[0].lower() + ''.join(x for x in $1.title() if not x.isspace())[1:]");
-#space Camel <_anything> 	= " " Eval("$1[0].lower() + ''.join(x for x in $1.title() if not x.isspace())[1:]");
-Camel [Case] That 		= HeardWord(\Cap,That) HeardWord(compound,that) {Ctrl+Left}
-                 		   {Shift+Right} HeardWord(\No-Caps,That){Ctrl+Right};
+PREX				= "()" {Left};
 
 
 # ---------------------------------------------------------------------------
@@ -173,7 +163,8 @@ Camel [Case] That 		= HeardWord(\Cap,That) HeardWord(compound,that) {Ctrl+Left}
 	     | Facebook = www.Facebook.com
 	     | stack overflow = stackoverflow.com 
 	     | LinkedIn = LinkedIn.com
-	     | Google drive =https://drive.google.com/drive/u/0/my-drive);
+	     | Google drive = https://drive.google.com/drive/u/0/my-drive
+	     | Vocola = http://vocola.net/v2/LanguageTutorial.asp);
 
 (Navigate|Go) to <website> 		= ShellExecute("chrome.exe $1");	
 (Navigate|go) to <_anything> .com	= ShellExecute("chrome.exe $1.com");	
@@ -184,16 +175,16 @@ Camel [Case] That 		= HeardWord(\Cap,That) HeardWord(compound,that) {Ctrl+Left}
 
 File Explorer			= AppBringUp("explorer");  # Opens File Explorer
 
-Switch Window 			= SendSystemKeys( {Alt+Tab} );
+SWICK				= SendSystemKeys( {Alt+Tab} );
 Copy and Switch  		= {Ctrl+a}{Ctrl+c} SendSystemKeys( {Alt+Tab} );
-Copy to (NatSpeak|Emacs|Composition)
-   				= {Ctrl+a}{Ctrl+c} HeardWord(switch,to,$1);
 Close Here 			= ButtonClick(2,1) Wait(100) c;
-Close Window 			= {Alt+Space}c;
+Close Window 			= {Alt+F4}; # close window 
+TOTCH				= {Ctrl+w}; # close tab 
+PEACH 				= {Ctrl+t}; # open new tab
 
-(Switch|Next) View     		= {Ctrl+Tab};
+GO NECK				= {Ctrl+Tab};
 (Switch|Next) View <n> 		= {Ctrl+Tab_$2};
-Previous View     		= {Ctrl+Shift+Tab};
+GO PREEV			= {Ctrl+Shift+Tab};
 Previous View <n> 		= {Ctrl+Shift+Tab_$1};
 
 Tab Back     			= {Shift+Tab};
