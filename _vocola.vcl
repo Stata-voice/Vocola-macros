@@ -72,6 +72,7 @@ New Line             		= {Enter};
 Line Here            		= {Enter}{Left};
 Copy Line           		= {home}{Shift+Down}{Shift+Home}{Ctrl+c};
 
+SHACKLE				= {home}{Shift+Down}{Shift+Home}; # select line
 SNIP LINE			= {home}{Shift+Down}{Shift+Home}{Del};
 Kill Up Line       		= {home}{Shift+Up}  {Shift+Home}{Del};
 Kill Up <n> Lines  		= {home}{Shift+Up_$1}  {Shift+Home}{Del};
@@ -131,7 +132,7 @@ space paste that 		= " " HeardWord(paste, that);
 
 
 ### General Commands 
-DIZZLE 				= {Ctrl+z}; # undo
+[DIZZLE | SCRATCHY]		= {Ctrl+z}; # undo
 DIZZLE <n> 			= {Ctrl+z_$1};
 RIZZLE 				= {Ctrl+y}; # redo
 
@@ -143,6 +144,7 @@ SAGE				= {Ctrl+s};
 (CHAMP | Cap) <n> 		= {Shift+Right_$2} HeardWord(\All-Caps,That); 
 bullet list 			= "* ";
 numbered list 			= "1. ";
+STAR				= "*";
 
 ### Punctuation
 CLAMOR				= "!";
