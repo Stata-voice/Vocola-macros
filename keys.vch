@@ -6,32 +6,32 @@
 ### Modified Phonetic Alphabet 
 ### Adapted parts from NATO alphabet, 
 ### part from voice code alphabet:http://voicecode.io/doc/alphabet
-<key> := (alf[ing]	=a | 
+<key> := (arch[ing]	=a | 
 	brov[ing]	=b | 
 	char[ring]	=c | 
-	delt[ing]	=d | 
+	dell[ing]	=d | 
 	etch[ing]	=e | 
-	fox[ing]	=f | 
-	golf[ing]	=g |
-	hot[ting]	=h |
+	fomp[ing]	=f | 
+	goof[ing]	=g |
+	hark[ting]	=h |
 	(ice| icing)	=i |
 	jinx[ing]	=j |
 	koop[ing]	=k | 
-	(lime| liming)	=l |
-	(mike| miking) 	=m | 
-	nerd[ing]	=n | 
-	orc[ing]	=o |
+	lug[ging]	=l |
+	mowsh[ing] 	=m | 
+	nerb[ing]	=n | 
+	ork[ing]	=o |
 	pooch[ing]	=p |
 	quash[ing]	=q |
-	rom[ming]	=r |
+	rosh[ming]	=r |
 	souk[ing]	=s |
 	teek[ing]	=t | 
-	boost[ing]	=u |  
-	veg[ging]	=v |
- 	whisk[ing]	=w |
-	tang[ing]	=x | 
-	yank[ing]	=y |
-	zoot[ing]	=z | 
+	unks[ing]	=u |  
+	(verge |verging)=v |
+ 	womp[ing]	=w |
+	trex[ing]	=x | 
+	yang[ing]	=y |
+	zooch[ing]	=z | 
 	0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 
 	"!" | "@" | "#" | "$" | "%" | "^" | "&" | "*" | "(" | ")" | "`" | 
 	"~" | "-" | "_" | "=" | "+" | "\" | "|" | "[" | "{" | "]" | "}" | 
