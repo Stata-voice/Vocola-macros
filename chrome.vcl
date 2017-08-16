@@ -1,7 +1,7 @@
 # Voice commands for chrome
 
 #Gmail macros
-compose 				= {c} ;
+compose 				= {q} ;
 compose in new window 			= {shift+c};
 search 					= {/} ;
 newer conversation 			= {k} ;
